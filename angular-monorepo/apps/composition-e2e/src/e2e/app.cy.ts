@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('composition_of_components-e2e', () => {
+describe('composition-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {

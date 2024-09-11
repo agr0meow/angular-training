@@ -433,7 +433,7 @@ import { CommonModule } from '@angular/common';
         <div id="welcome">
           <h1>
             <span> Hello there, </span>
-            Welcome composition_of_components 👋
+            Welcome composition 👋
           </h1>
         </div>
         <!--  HERO  -->
@@ -795,7 +795,7 @@ nx run-many -t build test lint</pre>
               </svg>
               View project details
             </summary>
-            <pre>nx show project composition_of_components</pre>
+            <pre>nx show project composition</pre>
           </details>
 
           <details>

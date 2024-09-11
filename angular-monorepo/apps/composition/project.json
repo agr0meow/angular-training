@@ -1,28 +1,28 @@
 {
-  "name": "composition_of_components",
+  "name": "composition",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/composition-of-components/src",
+  "sourceRoot": "apps/composition/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/composition-of-components",
-        "index": "apps/composition-of-components/src/index.html",
-        "browser": "apps/composition-of-components/src/main.ts",
+        "outputPath": "dist/apps/composition",
+        "index": "apps/composition/src/index.html",
+        "browser": "apps/composition/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/composition-of-components/tsconfig.app.json",
+        "tsConfig": "apps/composition/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/composition-of-components/public"
+            "input": "apps/composition/public"
           }
         ],
-        "styles": ["apps/composition-of-components/src/styles.scss"],
+        "styles": ["apps/composition/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "composition_of_components:build:production"
+          "buildTarget": "composition:build:production"
         },
         "development": {
-          "buildTarget": "composition_of_components:build:development"
+          "buildTarget": "composition:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,7 +64,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "composition_of_components:build"
+        "buildTarget": "composition:build"
       }
     },
     "lint": {
@@ -74,15 +74,15 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/composition-of-components/jest.config.ts"
+        "jestConfig": "apps/composition/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "composition_of_components:build",
+        "buildTarget": "composition:build",
         "port": 4200,
-        "staticFilePath": "dist/apps/composition-of-components/browser",
+        "staticFilePath": "dist/apps/composition/browser",
         "spa": true
       }
     }
