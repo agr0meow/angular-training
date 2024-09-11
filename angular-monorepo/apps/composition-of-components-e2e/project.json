@@ -1,0 +1,10 @@
+{
+  "name": "composition_of_components-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/composition-of-components-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["composition_of_components"],
+  "// targets": "to see all targets run: nx show project composition_of_components-e2e --web",
+  "targets": {}
+}
